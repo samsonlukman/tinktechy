@@ -15,6 +15,8 @@ def python_course(request):
         "flutterwaveCurrencies": currencies
     })
 
+def cs50p(request):
+    return render(request, "website/cs50p.html")
 def pay(request, tx_ref):
     trans_ref = request.GET.get("tx_ref")
     tx_ref = trans_ref
