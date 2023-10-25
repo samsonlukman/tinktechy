@@ -1,8 +1,33 @@
-from django.shortcuts import render
-from .models import NewMessage
+from django.shortcuts import render, get_object_or_404
+from .models import *
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters import HtmlFormatter
+import re
 
 def index(request):
     return render(request, "website/index.html")
+
+def article(request, title):
+    article = get_object_or_404(Article, title=title)
+    content = article.content  # Assuming your article content is stored in the 'content' field
+
+    # Define a regular expression pattern to find code snippets
+    code_pattern = r'<pre><code class="language-(\w+)">([\s\S]*?)</code></pre>'
+
+    def highlight_code(match):
+        language, code = match.groups()
+        lexer = get_lexer_by_name(language, stripall=True)
+        return highlight(code, lexer, HtmlFormatter(style="colorful"))
+
+    # Use re.sub to replace code snippets with highlighted code
+    highlighted_content = re.sub(code_pattern, highlight_code, content)
+
+    return render(request, 'website/article.html', {'article': article, 'highlighted_content': highlighted_content})
+
+def articles(request):
+    contents = Article.objects.all().order_by('-pub_date')
+    return render(request, "website/all_articles.html", {"all_articles": contents})
 
 def python_course(request):
     currencies = [

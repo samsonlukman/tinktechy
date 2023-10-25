@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'ckeditor',
+    'codemirror',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Link', 'TextColor', 'CodeSnippet'],
+        ],
+        'extraPlugins': 'codesnippet',
+        'skin': 'moono-lisa',
+    },
+}
 
 
 # Database

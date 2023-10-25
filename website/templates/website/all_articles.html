@@ -1,0 +1,55 @@
+{% extends "website/layout.html" %}
+{% load static %}
+{% load custom_tags %} 
+{% block body %}
+    <br>
+
+    <div class="article-grid">
+        {% for article in all_articles %}
+        <a href="{% url 'article' article.title %}">
+        <div class="article">
+            <h2 class="article-title">{{ article.title }}</h2>
+            <div class="article-content">
+                {{ article.content|truncate_to_ten_words|safe }}
+            </div>
+        </div>
+    </a>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    /* Add your custom CSS here */
+    .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+        
+    }
+
+    .article {
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .article-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+ 
+    .article-content {
+        margin-top: 10px;
+    }
+
+    a {
+        color: black;
+    }
+
+    /* Change the color of visited links to blue (you can use the same color as standard) */
+    a:visited {
+        color: blue;
+    }
+</style>
+</style>
+
+{% endblock %}
