@@ -3,6 +3,7 @@ from .models import *
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
+from pygments.style import Style
 import re
 
 def index(request):
@@ -18,7 +19,8 @@ def article(request, title):
     def highlight_code(match):
         language, code = match.groups()
         lexer = get_lexer_by_name(language, stripall=True)
-        return highlight(code, lexer, HtmlFormatter(style="colorful"))
+        formatter = HtmlFormatter(style="default")  # Use the "default" Pygments style
+        return highlight(code, lexer, formatter)
 
     # Use re.sub to replace code snippets with highlighted code
     highlighted_content = re.sub(code_pattern, highlight_code, content)
