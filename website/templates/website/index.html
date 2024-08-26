@@ -2,205 +2,137 @@
 {% load static %}
 {% block body %}
 
-    <section id="intro">
+    <section id="intro" class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h1>Welcome</h1>
-                    <p>I am Samson Lukman. Explore a diverse collection of my work as a Full-Stack Django developer. 
-                        With a passion for web development and a keen eye for containerization, deployment, and
-                         CI/CD, I bring innovative solutions to life. Whether it's crafting elegant websites,
-                          optimizing application performance, or streamlining deployment pipelines,
-                          I'm dedicated to pushing the boundaries of what's possible in the digital world.
-                           Welcome to my realm of coding, creativity, and the transformation of ideas into reality.</p>
+                    <h1 class="display-4">Welcome</h1>
+                    <p class="lead">I am Samson Lukman. Explore a diverse collection of my work as a Full-Stack Django and React Native developer. With a passion for web development and a keen eye for containerization, deployment, and CI/CD, I bring innovative solutions to life. Whether it's crafting elegant websites, optimizing application performance, or streamlining deployment pipelines, I'm dedicated to pushing the boundaries of what's possible in the digital world. Welcome to my realm of coding, creativity, and the transformation of ideas into reality.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 text-center">
                     <img src="https://media.licdn.com/dms/image/D4D03AQGDImNYNHd1rA/profile-displayphoto-shrink_200_200/0/1697415631341?e=1703116800&v=beta&t=UX8n94fzJmV9jvnxTwdHB4f4QjI2Pm5Ph-RM7EUVex0" alt="Samson Lukman" class="img-fluid rounded-circle">
                 </div>
             </div>
         </div>
     </section>
-    
-    
-<br>
 
-     <h1 style="text-align: center;" class="container">Projects</h1>
-     <br>
-    <section class="bord" id="projects">
+    <section id="projects" class="py-5 bg-light">
         <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://blogimages.softwaresuggest.com/blog/wp-content/uploads/2023/07/03180345/The-Ultimate-Guide-to-Ecommerce-Website-Development-in-2023.jpg" alt="suqsphere.com favicon" class="img-fluid rounded-circle">
-                    </div>
-                    <br>
-                    <div class="col-md-8">
-                        
-                        <a href="https://inetwork.pythonanywhere.com">
-                        <h3>Suqsphere</h3>
-                    </a>
-                        <br>
-                        <p>An all-encompassing e-commerce showcase. This multifaceted website combines the functionality of an e-commerce platform, the thrill of auctions, and the connectivity of social media, providing users with an interactive and engaging online shopping experience. As a featured project, it highlights my skills in web development, design, and creating dynamic user interfaces.</p>
-                    </div>
+            <h1 class="text-center mb-5">Projects</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://www.shopafrifood.com/media/images/afr.png" alt="Suqsphere" class="img-fluid rounded-circle">
                 </div>
-            
-        </div>
-        <br>
-        <div class="container">
-            
-          
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://mintechy.pythonanywhere.com/media/post_image/chatlogo.jpg" alt="suqsphere.com favicon" class="img-fluid rounded-circle">
-                    </div>
-                    <br>
-                    <div class="col-md-8">
-                      <a href="https://mintechy.pythonanywhere.com">
-                        <h3>ChatToLearn</h3>
+                <div class="col-md-8 mb-4">
+                    <a href="https://shopafrifood.com" class="text-decoration-none">
+                        <h3>Afri Food</h3>
                     </a>
-                        <br>
-                        <p>An Online Tech School Platform.
-                             This project is a comprehensive online tech school that goes beyond traditional e-learning. It seamlessly integrates social media features for students
-                              to connect and collaborate.
-                              Users can access course content and download resources for offline learning. 
-                              The platform also provides advanced tracking, allowing students to monitor their progress by keeping
-                               a record of how many times they've watched a video or downloaded course materials.
-                                This project showcases my expertise in building feature-rich e-learning platforms and
-                                 tracking systems, emphasizing user engagement and progress tracking.</p>
-                    </div>
-                </div>
-            
-        </div>
-        <br>
-        <div class="container">
-            
-           
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="rounded-circle" src="https://mir-s3-cdn-cf.behance.net/projects/404/08f560178319791.Y3JvcCw2NTMwLDUxMDgsNzYyOSww.jpg" class="img-fluid rounded-circle">
-                    </div>
-                    <br>
-                    <div class="col-md-8">
-                        <a href="https://ialert.pythonanywhere.com/">
-                        <h3>Crime Alert website</h3>
-                    </a>
-                    <br>
-                        <p>This project is a community-driven crime alert platform that empowers users to report incidents in their vicinity.
-                             Users can easily share information about local crimes and emergencies, with the system automatically capturing 
-                             their coordinates to pinpoint the incident's location accurately. It's a user-friendly and essential tool for 
-                             enhancing community safety and engagement. This project highlights my skills in building applications for community
-                              welfare, location-based services, and user-generated content, emphasizing the importance of safety and community involvement</p>
-                    </div>
-                </div>
-            
-        </div>
+                    <p>A fully-functional custom e-commerce web application built with Django,
+                    allowing users to purchase indigenous African food items, add items to a cart, create accounts
+                    , and track their purchase history.</p>
 
-        <br>
-        <div class="container">
-            
-           
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://icon-library.com/images/chat-app-icon/chat-app-icon-0.jpg" alt="chatap.pythonanywhere.com favicon" class="img-fluid rounded-circle">
-                    </div>
-                    <br>
-                    <div class="col-md-8">
-                        <a href="https://chatap.pythonanywhere.com/">
-                        <h3>Chat App - Django Channels and Websockets</h3>
-                    </a>
-                        <br>
-                        <p>This project showcases a real-time chat application built on Django Channels and Websockets,
-                             enabling users to engage in instant and interactive conversations. 
-                             With a clean and intuitive user interface, it offers real-time messaging capabilities, 
-                             ensuring seamless communication. This project highlights my expertise in web development,
-                              server-side technologies, and real-time functionality, 
-                              emphasizing the power of instant communication for today's digital world.</p>
-                    </div>
-                </div>
-            
-        </div>
-    </section>
-    <br>
-    <section class="bord" id="github-link">
-        <div class="container">
-            <a href="https://github.com/samsonlukman" target="_blank">
-            <h1>View more projects on GitHub</h1>
-           </a>
-        </div>
-    </section>
-<br>
-    <footer style="background-color: black; color: white;">
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        {% if message %}
-<div class="alert alert-success">
-    {{ message }}
-</div>
-{% endif %}
-                        <div class="contact-form">
-                            <h3>Send a Message</h3>
-                        <form action="{% url 'message' %}" method="post">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea name="message" rows="4" class="form-control" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </form>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-    
-        <section id="contact">
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://mintechy.pythonanywhere.com/media/post_image/chatlogo.jpg" alt="ChatToLearn" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8 mb-4">
+                    <a href="https://mintechy.pythonanywhere.com" class="text-decoration-none">
+                        <h3>ChatToLearn</h3>
+                    </a>
+                    <p>An Online Tech School Platform. This project is a comprehensive online tech school that goes beyond traditional e-learning. It seamlessly integrates social media features for students to connect and collaborate. Users can access course content and download resources for offline learning. The platform also provides advanced tracking, allowing students to monitor their progress by keeping a record of how many times they've watched a video or downloaded course materials. This project showcases my expertise in building feature-rich e-learning platforms and tracking systems, emphasizing user engagement and progress tracking.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/08f560178319791.Y3JvcCw2NTMwLDUxMDgsNzYyOSww.jpg" alt="Crime Alert" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8 mb-4">
+                    <a href="https://ialert.pythonanywhere.com/" class="text-decoration-none">
+                        <h3>Crime Alert website</h3>
+                    </a>
+                    <p>This project is a community-driven crime alert platform that empowers users to report incidents in their vicinity. Users can easily share information about local crimes and emergencies, with the system automatically capturing their coordinates to pinpoint the incident's location accurately. It's a user-friendly and essential tool for enhancing community safety and engagement. This project highlights my skills in building applications for community welfare, location-based services, and user-generated content, emphasizing the importance of safety and community involvement.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://icon-library.com/images/chat-app-icon/chat-app-icon-0.jpg" alt="Chat App" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8 mb-4">
+                    <a href="https://chatap.pythonanywhere.com/" class="text-decoration-none">
+                        <h3>Chat App - Django Channels and Websockets</h3>
+                    </a>
+                    <p>This project showcases a real-time chat application built on Django Channels and Websockets, enabling users to engage in instant and interactive conversations. With a clean and intuitive user interface, it offers real-time messaging capabilities, ensuring seamless communication. This project highlights my expertise in web development, server-side technologies, and real-time functionality, emphasizing the power of instant communication for today's digital world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="github-link" class="py-5 text-center">
+        <div class="container">
+            <a href="https://github.com/samsonlukman" target="_blank" class="btn btn-primary btn-lg">View more projects on GitHub</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <section id="contact" class="py-5">
             <div class="container">
                 <div class="row">
+                    <div class="col-md-4 mb-4">
+                        {% if message %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                        {% endif %}
+                        <div class="contact-form">
+                            <h3>Send a Message</h3>
+                            <form action="{% url 'message' %}" method="post">
+                                {% csrf_token %}
+                                <div class="form-group mb-3">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" rows="4" class="form-control" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <ul class="list-unstyled contact-icons">
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:samsonlukman@tinktechy.com">samsonlukman@tinktechy.com</a>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="mailto:samsonlukman@tinktechy.com" class="text-white">samsonlukman@tinktechy.com</a>
                             </li>
-                            <li>
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+234 701 577 9491">+234 701 577 9491</a>
+                            <li class="mb-3">
+                                <i class="fas fa-phone me-2"></i>
+                                <a href="tel:+2347015779491" class="text-white">+234 701 577 9491</a>
                             </li>
-                            <br>
-                            
-                                <li class="list-inline-item">
-                                    <a href="https://www.linkedin.com/in/lukman-o-samson-497225135/" target="_blank"><i class="fab fa-linkedin" style="font-size: 50px;"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="https://web.facebook.com/samson.lukman2" target="_blank"><i class="fab fa-facebook" style="font-size: 50px;"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="https://github.com/samsonlukman" target="_blank"><i class="fab fa-github" style="font-size: 50px;"></i></a>
-                                </li>
-                            
-                            
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/lukman-o-samson-497225135/" target="_blank"><i class="fab fa-linkedin text-white" style="font-size: 30px;"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://web.facebook.com/samson.lukman2" target="_blank"><i class="fab fa-facebook text-white" style="font-size: 30px;"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/samsonlukman" target="_blank"><i class="fab fa-github text-white" style="font-size: 30px;"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
-    
-        
+        <div class="container text-center">
+            <p>Samson Lukman &copy; Tinktechy 2023</p>
+        </div>
     </footer>
-    
-
-
-    
 
 {% endblock %}
