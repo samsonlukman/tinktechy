@@ -42,6 +42,9 @@ def python_course(request):
         "flutterwaveCurrencies": currencies
     })
 
+def full_stack_course(request):
+    return render(request, 'website/full_stack.html')
+
 def cs50p(request):
     return render(request, "website/cs50p.html")
 def pay(request, tx_ref):

@@ -1,205 +1,123 @@
 {% extends "website/layout.html" %}
 
 {% block body %}
-<div class="course_body">
-    <div class="container">
-        <img src="https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.png" alt="python image" class="img-fluid rounded-circle">
-        <h1 style="text-align: center;">Learn Python</h1>
-        <p> Python is a versatile, beginner-friendly programming language that offers a wide range of applications. It's widely used in web development, data analysis, artificial intelligence, and more. Python's clean and readable syntax makes it easy to understand, making it an excellent language for beginners. Moreover, Python has a strong community and extensive libraries, making it a valuable skill for future job opportunities. Whether you're interested in software development, data science, or just want to boost your problem-solving skills, Python is a great language to start with.</p>
-        <p> The class starts August 2024 and runs for 10 weeks.
-            Early registration fee is $60 (Regular fee: $65) and #50, 000 in Naira (Regular fee: #60, 000).</p>
-        <p>Students will earn a certificate from Tink Techy and Harvard's CS50P certificate.</p>
-
-        <h2 style="text-align: center;">Course Details</h2>
-        <ul class="contents-list">
-            <li>Course Curriculum: Harvard's CS50p</li>
-            <li>Course Duration: 3 months</li>
-            <li>Fee: $65 (Early registration: $60)</li>
-            <li>Quizzes: Over 30 coding quizzes</li>
-            <li>Problem Sets: 9 challenging problem sets</li>
-            <li>Final Project: One final project</li>
-            <li>Python Topics Covered:
-                <ul>
-                    <li>Loops</li>
-                    <li>Variables</li>
-                    <li>Functions</li>
-                    <li>Exceptions</li>
-                    <li>Regular Expressions</li>
-                    <li>Objected-Oriented Programming</li>
-                    <li>Libraries</li>
-                    <li>File I/O</li>
-                    <li>Unit Tests, Debugging, Et Cetera</li>
-                </ul></li>
+<div class="course-body container py-5">
+    <div class="text-center">
+        <img src="https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.png" alt="Python image" class="img-fluid rounded-circle" style="width: 150px;">
+        <h1 class="text-primary mt-3">Learn Python</h1>
+    </div>
+    
+    <p class="text-muted text-center">Python is a versatile, beginner-friendly programming language that offers a wide range of applications. It's widely used in web development, data analysis, artificial intelligence, and more. Python's clean and readable syntax makes it easy to understand, making it an excellent language for beginners. Moreover, Python has a strong community and extensive libraries, making it a valuable skill for future job opportunities. Whether you're interested in software development,
+    data science, or just want to boost your problem-solving skills, Python is a great language to start with.</p>
+    
+    <div class="card shadow-sm p-4 mb-4">
+        <h2 class="text-center text-success">Course Details</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">📚 Course Curriculum: Harvard's CS50p</li>
+            <li class="list-group-item">⏳ Duration: 3 months</li>
+            <li class="list-group-item">💰 Fee: <strong>$55</strong> (Outside Nigeria) / <strong>₦60,000</strong> (Nigeria)</li>
+            <li class="list-group-item">🧩 30+ Coding Quizzes</li>
+            <li class="list-group-item">🚀 9 Problem Sets</li>
+            <li class="list-group-item">🎓 Final Project</li>
         </ul>
-        <button onclick="openPaymentModal()">
-            <h5>Click to choose payment method</h5>
-        </button>
-
-        <div id="paymentModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closePaymentModal()">&times;</span>
-                <div class="modal-header">
-                    <h5>Payment Method Selection</h5>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li>
-                    <a href="https://flutterwave.com/pay/tn2z0ia0hay8" class="btn">Pay in Dollars</a>
-                </li>
-                <li>
-                    <a href="https://flutterwave.com/pay/yyhtwyxoatbf" class="btn">Pay in Naira</a>
-                </li>
-                </ul>
+    </div>
+    
+    <h3 class="text-center">Python Topics Covered</h3>
+    <div class="row text-center">
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item">Loops</li>
+                <li class="list-group-item">Variables</li>
+                <li class="list-group-item">Functions</li>
+                <li class="list-group-item">Exceptions</li>
+                <li class="list-group-item">Regular Expressions</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item">OOP (Object-Oriented Programming)</li>
+                <li class="list-group-item">Libraries</li>
+                <li class="list-group-item">File I/O</li>
+                <li class="list-group-item">Unit Testing</li>
+                <li class="list-group-item">Debugging</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg" onclick="openPaymentModal()">Choose Payment Method</button>
+    </div>
+    
+    <div id="paymentModal" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <span class="close text-danger" onclick="closePaymentModal()">&times;</span>
+                <h5 class="text-center">Select Payment Method</h5>
+                <div class="text-center mt-3">
+                    <a href="https://flutterwave.com/pay/tn2z0ia0hay8" class="btn btn-success btn-block" target="_blank">💵 Pay in Dollars</a>
+                    <a href="https://flutterwave.com/pay/yyhtwyxoatbf" class="btn btn-warning btn-block mt-2" target="_blank">💳 Pay in Naira</a>
                 </div>
             </div>
         </div>
-
-        <script>
-        function openPaymentModal() {
-            var modal = document.getElementById("paymentModal");
-            modal.style.display = "block";
-        }
-
-        function closePaymentModal() {
-            var modal = document.getElementById("paymentModal");
-            modal.style.display = "none";
-        }
-
-        // Close the modal if the user clicks outside of it
-        window.onclick = function(event) {
-            var modal = document.getElementById("paymentModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
     </div>
 </div>
 
-
-
-  <br>
-
-{% include 'website/footer.html' %}
+<script>
+function openPaymentModal() {
+    document.getElementById("paymentModal").style.display = "block";
+}
+function closePaymentModal() {
+    document.getElementById("paymentModal").style.display = "none";
+}
+window.onclick = function(event) {
+    var modal = document.getElementById("paymentModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 <style>
-     /* Style for the modal */
-     .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-
-        /* Style for the modal content */
-        .modal-content {
-            position: relative;
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            max-width: 300px; /* Adjust the maximum width to your preference */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        /* Style for the close button */
-        .close {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-.top_body {
+body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
 }
-
-
-h1, h2 {
-    color: #007bff;
+.course-body {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-h2 {
-    margin-top: 20px;
-}
-
-p {
-    color: #333;
-}
-
-form {
-    margin-bottom: 50px;
-}
-
-form div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.btn {
-    cursor: pointer;
-}
-
 .modal {
     display: none;
-}
-
-.contents-list li::before {
-    content: "✓";
-    margin-right: 10px;
-    color: #007bff;
-}
-
-.modal-dialog {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-.modal .close {
-    align-self: flex-end;
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
     cursor: pointer;
 }
-
-.course_body {
-    margin-top: 30px;
-}
-
-.contents-list {
-    list-style: none;
-    padding: 0;
-}
-
-.contents-list li {
-    margin-bottom: 10px;
-}
-
 </style>
-</div>
+
+{% include 'website/footer.html' %}
 {% endblock %}
